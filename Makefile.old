@@ -31,8 +31,8 @@ CCDLFLAGS =
 DLEXT = dll
 DLSRC = dl_win32.xs
 LD = link
-LDDLFLAGS = -dll -nologo -nodefaultlib -release  -libpath:"C:\Perl\lib\CORE"  -machine:x86
-LDFLAGS = -nologo -nodefaultlib -release  -libpath:"C:\Perl\lib\CORE"  -machine:x86
+LDDLFLAGS = -dll -nologo -nodefaultlib -release  -libpath:"C:\Lang\Perl\lib\CORE"  -machine:x86
+LDFLAGS = -nologo -nodefaultlib -release  -libpath:"C:\Lang\Perl\lib\CORE"  -machine:x86
 LIBC = msvcrt.lib
 LIB_EXT = .lib
 OBJ_EXT = .obj
@@ -147,12 +147,9 @@ EXPORT_LIST = Dump.def
 
 PERL_ARCHIVE = $(PERL_INC)\perl56.lib
 
-TO_INST_PM = Dump.pm \
-	temp.pl
+TO_INST_PM = Dump.pm
 
-PM_TO_BLIB = temp.pl \
-	$(INST_LIBDIR)\temp.pl \
-	Dump.pm \
+PM_TO_BLIB = Dump.pm \
 	$(INST_LIBDIR)\Dump.pm
 
 
@@ -392,7 +389,7 @@ clean ::
 # Delete temporary files (via clean) and also delete installed files
 realclean purge ::  clean
 	$(PERL) -I$(PERL_ARCHLIB) -I$(PERL_LIB) -MExtUtils::Command -e rm_rf $(INST_AUTODIR) $(INST_ARCHAUTODIR)
-	$(PERL) -I$(PERL_ARCHLIB) -I$(PERL_LIB) -MExtUtils::Command -e rm_f  $(INST_LIBDIR)\temp.pl $(INST_LIBDIR)\Dump.pm
+	$(PERL) -I$(PERL_ARCHLIB) -I$(PERL_LIB) -MExtUtils::Command -e rm_f  $(INST_LIBDIR)\Dump.pm
 	$(PERL) -I$(PERL_ARCHLIB) -I$(PERL_LIB) -MExtUtils::Command -e rm_rf Makefile Makefile.old
 
 

@@ -1,9 +1,9 @@
 package Win32::TieRegistry::Dump;
-our $VERSION = 0.01;
+our $VERSION = 0.02;	# Updated tests and turned off warnings
 
 use 5.006;
 use strict;
-use warnings;
+# do not use warnings;
 use Carp;
 use Win32::TieRegistry ( Delimiter=>"/", ArrayValues=>0 );
 no strict 'refs';
