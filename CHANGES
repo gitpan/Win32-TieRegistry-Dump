@@ -1,9 +1,5 @@
 Revision history for Perl extension Win32::TieRegistry::PMVersionInfo.
 
-0.02  Wed May 15 14:17 2002
-	- original version; created by h2xs 1.21 with options
-		-X -n Win32::TieRegistry::Dump
-
 0.01  Tue Dec  14 20:01:42 2001
 	- original version; created by h2xs 1.21 with options
 		-X -n Win32::TieRegistry::Dump
